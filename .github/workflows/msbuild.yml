@@ -20,5 +20,5 @@ jobs:
     - name: Build Solution
       run: msbuild StellaSora-Tool.sln /p:Configuration=Release /p:Platform=x64
       
-    - name: Verify Build Output
-      run: dir /s *.exe *.dll *.pdb
+    - name: Verify Build Output (PowerShell)
+      run: Get-ChildItem -Recurse -Include *.exe,*.dll,*.pdb
