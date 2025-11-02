@@ -23,11 +23,8 @@ jobs:
     - name: Verify Build Output
       run: Get-ChildItem -Recurse -Include *.exe,*.dll,*.pdb
       
-    - name: Check current directory
-      run: Get-ChildItem -Recurse
-      
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
       with:
         name: StellaSora-Tool-Build
-        path: StellaSora-Tool/bin/Release-x64/*
+        path: bin/Release-x64/*
